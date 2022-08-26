@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.6.
 
+## Ui Spec
+
+Figma Sketch can be found here: [Figma Sketch](https://www.figma.com/file/pRROUAKfgGcdXElgi8pAyg/Playing-Cards-Shop?node-id=3%3A125)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.

@@ -37,11 +37,17 @@
     justify-content: center;
     gap: 1vw;
     margin: 1vh;
+    padding-left: 1vh;
 
     div {
         width: 8vh;
         height: 8vh;
         background-color: mat.get-color-from-palette($pcs-primary, "default-contrast");
+    }
+
+    mat-icon {
+        color: mat.get-color-from-palette($pcs-primary, "default-contrast");
+        transform: scale(2);
     }
 }
 
@@ -66,10 +72,15 @@
     justify-content: center;
 
     margin: 1vh;
-    padding-right: 2vw;
+    padding-right: 1vh;
     div {
         width: 8vh;
         height: 8vh;
         background-color: mat.get-color-from-palette($pcs-primary, "default-contrast");
+    }
+
+    mat-icon {
+        color: mat.get-color-from-palette($pcs-primary, "default-contrast");
+        transform: scale(1.5);
     }
 }
