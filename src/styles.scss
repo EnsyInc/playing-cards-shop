@@ -1,1 +1,46 @@
-/* You can add global styles to this file, and also import other style files */
+@use "@angular/material" as mat;
+@import "colors.scss";
+
+// mat.define-typography-level(font-size, line-height, font-weight, font-family, letter-spacing)
+$pcs-typography: mat.define-typography-config(
+    $font-family: "Roboto",
+);
+
+@include mat.core($pcs-typography);
+@include mat.strong-focus-indicators();
+
+$pcs-primary: mat.define-palette($md-primary, 500, A200, 900);
+$pcs-accent: mat.define-palette($md-accent, 500, A200, 800);
+$pcs-warn: mat.define-palette($md-warn);
+
+$playing-cards-shop-theme: mat.define-dark-theme(
+    (
+        color: (
+            primary: $pcs-primary,
+            accent: $pcs-accent,
+            warn: $pcs-warn,
+        ),
+        typography: $pcs-typography,
+    )
+);
+
+@include mat.all-component-themes($playing-cards-shop-theme);
+@include mat.strong-focus-indicators-theme($playing-cards-shop-theme);
+
+html,
+body {
+    height: 100%;
+}
+body {
+    background-color: $md-dark;
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+a {
+    text-decoration: none;
+
+    &:visited {
+        color: initial;
+    }
+}

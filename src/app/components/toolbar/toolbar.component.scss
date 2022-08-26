@@ -1,0 +1,75 @@
+@use "@angular/material" as mat;
+
+@import "/src/styles.scss";
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 10vh;
+    background-color: mat.get-color-from-palette($pcs-primary);
+
+    .left,
+    .right {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .left {
+        gap: 3em;
+    }
+
+    .right {
+        gap: 1em;
+    }
+
+    a {
+        color: mat.get-color-from-palette($pcs-primary, "default-contrast");
+        font-size: 16px;
+    }
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+    margin: 1vh;
+
+    div {
+        width: 8vh;
+        height: 8vh;
+        background-color: mat.get-color-from-palette($pcs-primary, "default-contrast");
+    }
+}
+
+.search {
+    padding-top: 2vh;
+
+    mat-form-field {
+        width: 30vw;
+    }
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    align-items: space;
+    gap: 2em;
+}
+
+.cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 1vh;
+    padding-right: 2vw;
+    div {
+        width: 8vh;
+        height: 8vh;
+        background-color: mat.get-color-from-palette($pcs-primary, "default-contrast");
+    }
+}
