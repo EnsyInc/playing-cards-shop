@@ -1,0 +1,29 @@
+@import "/src/colors.scss";
+
+.container {
+    color: $md-light;
+}
+
+.carousel {
+    display: flex;
+    gap: 2em;
+}
+
+.arrow-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(2);
+
+    .mat-focus-indicator::before {
+        border: none !important;
+    }
+}
+
+.cards {
+    display: flex;
+    gap: 3em;
+    width: 85vw;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}

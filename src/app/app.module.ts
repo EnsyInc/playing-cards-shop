@@ -12,9 +12,16 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
+import { ProductCardCarouselComponent } from './components/product-card-carousel/product-card-carousel.component';
 
 @NgModule({
-    declarations: [AppComponent, HomeComponent, ToolbarComponent, ProductCardComponent],
+    declarations: [
+        AppComponent,
+        HomeComponent,
+        ToolbarComponent,
+        ProductCardComponent,
+        ProductCardCarouselComponent,
+    ],
     imports: [
         BrowserModule,
         AppRoutingModule,
