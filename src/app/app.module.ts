@@ -11,9 +11,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
+import { ProductCardComponent } from './components/product-card/product-card.component';
 
 @NgModule({
-    declarations: [AppComponent, HomeComponent, ToolbarComponent],
+    declarations: [AppComponent, HomeComponent, ToolbarComponent, ProductCardComponent],
     imports: [
         BrowserModule,
         AppRoutingModule,

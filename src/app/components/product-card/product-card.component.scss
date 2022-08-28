@@ -1,0 +1,19 @@
+@import "/src/colors.scss";
+
+.container {
+    color: $md-light;
+    display: inline-block;
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.product-image {
+    width: max(100px, 10vw);
+    height: max(150px, 15vw);
+    object-fit: cover;
+}

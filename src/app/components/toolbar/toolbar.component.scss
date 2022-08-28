@@ -3,6 +3,7 @@
 @import "/src/styles.scss";
 
 .container {
+    color: $md-light;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,19 +32,13 @@
     }
 }
 
-.logo {
+.logo a {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1vw;
     margin: 1vh;
     padding-left: 1vh;
-
-    div {
-        width: 8vh;
-        height: 8vh;
-        background-color: mat.get-color-from-palette($pcs-primary, "default-contrast");
-    }
 
     mat-icon {
         color: mat.get-color-from-palette($pcs-primary, "default-contrast");
