@@ -1,23 +1,29 @@
 <div class="container">
-    <h2>{{ title }}</h2>
+    <div class="carousel-container">
+        <h2>{{ title }}</h2>
 
-    <div class="carousel">
-        <div class="arrow-container">
-            <button #beforeArrow mat-icon-button (click)="scrollLeft(cards)">
-                <mat-icon>navigate_before</mat-icon>
-            </button>
-        </div>
-        <div #cards class="cards" (scroll)="disableArrowsIfNeeded()">
-            <pcs-product-card
-                *ngFor="let product of products"
-                [product]="product"
-            >
-            </pcs-product-card>
-        </div>
-        <div class="arrow-container">
-            <button #nextArrow mat-icon-button (click)="scrollRight(cards)">
-                <mat-icon>navigate_next</mat-icon>
-            </button>
+        <div class="carousel">
+            <div class="arrow-container">
+                <button
+                    #beforeArrow
+                    mat-icon-button
+                    (click)="scrollLeft(cards)"
+                >
+                    <mat-icon>navigate_before</mat-icon>
+                </button>
+            </div>
+            <div #cards class="cards" (scroll)="disableArrowsIfNeeded()">
+                <pcs-product-card
+                    *ngFor="let product of products"
+                    [product]="product"
+                >
+                </pcs-product-card>
+            </div>
+            <div class="arrow-container">
+                <button #nextArrow mat-icon-button (click)="scrollRight(cards)">
+                    <mat-icon>navigate_next</mat-icon>
+                </button>
+            </div>
         </div>
     </div>
 </div>

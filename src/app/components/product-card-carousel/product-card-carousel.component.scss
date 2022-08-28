@@ -1,7 +1,20 @@
 @import "/src/colors.scss";
 
+:host {
+    display: block;
+}
+
 .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-container {
     color: $md-light;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
 }
 
 .carousel {
