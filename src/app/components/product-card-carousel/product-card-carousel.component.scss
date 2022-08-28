@@ -6,7 +6,7 @@
 
 .carousel {
     display: flex;
-    gap: 2em;
+    gap: clamp(1em, 1vw, 2em);
 }
 
 .arrow-container {
@@ -24,7 +24,7 @@
 
 .cards {
     display: flex;
-    gap: 3em;
+    gap: clamp(1em, 2vw, 3em);
     width: 85vw;
     overflow-x: hidden;
     scroll-behavior: smooth;

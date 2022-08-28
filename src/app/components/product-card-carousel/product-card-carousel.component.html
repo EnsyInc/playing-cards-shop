@@ -7,11 +7,7 @@
                 <mat-icon>navigate_before</mat-icon>
             </button>
         </div>
-        <div
-            #cards
-            class="cards"
-            (scroll)="disableArrowsIfNeeded(cards, beforeArrow, nextArrow)"
-        >
+        <div #cards class="cards" (scroll)="disableArrowsIfNeeded()">
             <pcs-product-card
                 *ngFor="let product of products"
                 [product]="product"
