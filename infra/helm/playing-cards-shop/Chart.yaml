@@ -1,0 +1,6 @@
+apiVersion: v2
+name: playing-cards-shop
+appVersion: "0.0.1"
+description: A helm chart for the Playing Cards shop
+version: 1.0.0
+type: application

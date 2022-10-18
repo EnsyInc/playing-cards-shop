@@ -1,0 +1,5 @@
+image:
+  name: playing-cards-shop-frontend
+  version: latest
+
+replicas: 1

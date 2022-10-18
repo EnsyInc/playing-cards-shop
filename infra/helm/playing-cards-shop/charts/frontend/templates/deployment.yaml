@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.global.name }}-frontend
+spec:
+  replicas: {{ .Values.replicas }}
+  selector:
+    matchLabels: 
+      app: {{ .Values.global.name }}-frontend
+  template:
+    metadata:
+      labels: 
+        app: {{ .Values.global.name }}-frontend
+    spec:
+      containers:
+      - image: {{ .Values.global.registry }}/{{ .Values.image.name }}:{{ .Values.image.version }}
+        imagePullPolicy: Always
+        name: {{ .Values.global.name }}-frontend
+        ports:
+        - name: http
+          containerPort: 4200
+      imagePullSecrets:
+      - name: {{ .Values.global.crSecretName }}

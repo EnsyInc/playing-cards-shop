@@ -1,0 +1,4 @@
+global:
+  registry: ensyinc.jfrog.io/ensyinc-docker
+  name: playing-cards-shop
+  crSecretName: cr-auth

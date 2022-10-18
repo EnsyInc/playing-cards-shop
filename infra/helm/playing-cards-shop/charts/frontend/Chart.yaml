@@ -1,0 +1,6 @@
+apiVersion: v2
+name: pplaying-cads-shop-frontend
+appVersion: "0.0.1"
+description: A helm chart for the Playing Cards shop frontend
+version: 1.0.0
+type: application
