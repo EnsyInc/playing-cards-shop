@@ -1,0 +1,67 @@
+name: "PlayingCardsShopFrontend-$(Date:yy.M)-$(Rev:rr)"
+
+pool:
+    vmImage: "ubuntu-latest"
+
+variables:
+    - name: HelmChartFolderPath
+      value: /infra/helm/playing-cards-shop
+
+trigger:
+    branches:
+        include:
+            - master
+    paths:
+        include:
+            - src/frontend/*
+            - infra/helm/*
+pr:
+    autoCancel: true
+    drafts: false
+    branches:
+        include:
+            - master
+    paths:
+        include:
+            - src/frontend/*
+            - infra/helm/*
+
+stages:
+    - stage: ci
+      jobs:
+          - job: BuildPCSFrontend
+            displayName: Build PCS frontendangular
+            steps:
+                - checkout: self
+
+          - job: BuildPCSFrontendDocker
+            displayName: Build PCS frontend docker image
+            steps:
+                - checkout: self
+
+          - job: RunTests
+            displayName: Run tests
+            steps:
+                - checkout: self
+
+          - job: LintSource
+            displayName: Lint source code
+            steps:
+                - checkout: self
+
+          - job: HelmLint
+            displayName: Helm Lint
+            steps:
+                - checkout: self
+
+                - pwsh: helm lint $(Build.SourcesDirectory)/${{ variables.HelmChartFolderPath }}
+                  displayName: "Run helm lint"
+
+    - stage: cd
+      dependsOn: ci
+      condition: eq(variables['Build.SourceBranch'], 'refs/heads/master')
+      jobs:
+          - job: DeployPCS
+            displayName: Deploy PCS
+            steps:
+                - checkout: self

@@ -5,10 +5,10 @@ metadata:
     name: {{ .Values.global.name }}-frontend
   name: {{ .Values.global.name }}-frontend
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   ports:
-    - protocol: "TCP"
+    - protocol: TCP
       port: 80
-      targetPort: 4200
+      targetPort: 80
   selector:
     app: {{ .Values.global.name }}-frontend
