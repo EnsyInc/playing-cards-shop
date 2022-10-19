@@ -29,25 +29,25 @@ pr:
 stages:
     - stage: ci
       jobs:
-          - job: BuildPCSFrontend
-            displayName: Build PCS frontendangular
-            steps:
-                - checkout: self
+          #   - job: BuildPCSFrontend
+          #     displayName: Build PCS frontendangular
+          #     steps:
+          #         - checkout: self
 
-          - job: BuildPCSFrontendDocker
-            displayName: Build PCS frontend docker image
-            steps:
-                - checkout: self
+          #   - job: BuildPCSFrontendDocker
+          #     displayName: Build PCS frontend docker image
+          #     steps:
+          #         - checkout: self
 
-          - job: RunTests
-            displayName: Run tests
-            steps:
-                - checkout: self
+          #   - job: RunTests
+          #     displayName: Run tests
+          #     steps:
+          #         - checkout: self
 
-          - job: LintSource
-            displayName: Lint source code
-            steps:
-                - checkout: self
+          #   - job: LintSource
+          #     displayName: Lint source code
+          #     steps:
+          #         - checkout: self
 
           - job: HelmLint
             displayName: Helm Lint
